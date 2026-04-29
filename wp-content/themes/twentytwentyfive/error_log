@@ -1,0 +1,24 @@
+[19-Aug-2025 04:42:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25
+[20-Aug-2025 06:44:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25
+[21-Aug-2025 11:36:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25
+[22-Aug-2025 00:29:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25
+[22-Aug-2025 10:47:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25
+[23-Aug-2025 02:19:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/ciacrw/public_html/wp-content/themes/twentytwentyfive/functions.php on line 25

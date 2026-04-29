@@ -1,0 +1,236 @@
+/*
+Theme Name: Green Environment
+Description: When building websites on ecology and the environment, Green Environment is a great option. It is ideal for numerous ecology-preserving movements and nonprofits that concentrate on environmental and ecological issues, like Green Peace. Additionally, organic life enterprises like recycling companies, animal preservation, alternative energy source distribution, and fundraising can employ this subject. This subject assists in raising awareness about various ecological initiatives, whether you are running a green business, an NGO that promotes environmental preservation, or an organization that is committed to animal care and protection.It is adaptable to various site requirements, making it suitable for a variety of projects or websites. Page load times can be maintained while utilizing high-resolution graphics and photos in Green Environment. Additionally, it has capabilities for fundraising and donation possibilities, which makes it perfect for environmental foundations, eco-activism, and charity events. You can quickly create and design your website to suit your organic and green mission with Elementor support.
+Author: misbahwp
+Theme URI: https://www.misbahwp.com/products/free-green-wordpress-theme
+Author URI: https://www.misbahwp.com/
+Template: ecology-nature
+Version: 4.3
+Requires PHP: 7.2
+Tested up to: 6.7
+Requires at least: 5.0
+Tags: blog, food-and-drink, e-commerce, wide-blocks, one-column, two-columns, three-columns, four-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, featured-image-header, editor-style, post-formats, theme-options, threaded-comments, flexible-header
+Text Domain: green-environment
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+Green Environment WordPress Theme has been created by misbahwp(misbahwp.com), 2022.
+Green Environment WordPress Theme is released under the terms of GNU GPL
+*/
+
+/* HEADER */
+
+.page-template-frontpage .header-box {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+.page-template-frontpage #site-navigation{
+	box-shadow: none;
+	background: #fff;
+}
+.top-header{
+	padding: 0 15px;
+}
+.page-template-frontpage .top-header{
+	background: #fff;
+}
+#main-menu ul li a{
+	padding: 0 8px;
+}
+#main-menu ul.children, #main-menu ul.sub-menu{
+	top: 50px;
+}
+.header-box {
+    background: #efef;
+}
+.page-template-frontpage .header-box{
+	background: transparent;
+}
+#main-menu li:hover > ul{
+	left: calc(100% - 160px) ;
+}
+main#content {
+    margin-top: 30px;
+}
+a.slide-btn-2:hover {
+    background: #000 !important;
+}
+
+
+/* OUR FEATURES */
+
+.entry-audio audio {
+    width: 100%;
+}
+
+/* OUR FEATURES */
+
+.featuress-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px 2px #e5e5e5;
+}
+.features {
+    position: relative;
+    margin-top: -5%;
+    z-index: 9;
+}
+.featuress-icon span {
+    background: #7abf18;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+}
+.featuress-content p {
+    font-size: 14px;
+}
+
+/* ABOUT US */
+
+.inner-box img {
+    border: none;
+    position: static;
+    margin-top: 0;
+}
+#about-us {
+    padding: 50px 0 !important;
+}
+.bypostauthor,.aligncenter,.screen-reader-text{
+
+}
+
+.sh2 {
+  border-color: transparent  transparent #7abf18 transparent ;
+}
+
+/* THEME COLOR */
+
+a.shop-btn, p.slider_btn a, #main-menu ul.children li a:hover, #main-menu ul.sub-menu li a:hover, .pagination .nav-links a:hover, .pagination .nav-links a:focus, .pagination .nav-links span.current, .ecology-nature-pagination span.current, .ecology-nature-pagination span.current:hover, .ecology-nature-pagination span.current:focus, .ecology-nature-pagination a span:hover, .ecology-nature-pagination a span:focus, .comment-respond input#submit, .comment-reply a, .sidebar-widget h4.title, .sidebar-area .tagcloud a, .searchform input[type=submit], .searchform input[type=submit]:focus, .menu-toggle, .dropdown-toggle, button.close-menu, nav.woocommerce-MyAccount-navigation ul li, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce a.added_to_cart, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce a.added_to_cart, .scroll-up a, .woocommerce nav.woocommerce-pagination ul li span.current,.wp-block-woocommerce-cart .wc-block-cart__submit-button, .wc-block-components-checkout-place-order-button, .wc-block-components-totals-coupon__button{
+	background: #7abf18;
+}
+a:hover, a:focus, .contact-box span, .contact-box h6, .logo a:hover, .logo a:focus, .social-links a:hover, #main-menu a:hover, #main-menu ul li a:hover, #main-menu li:hover > a, #main-menu a:focus, #main-menu ul li a:focus, #main-menu li.focus > a, #main-menu li:focus > a, #main-menu ul li.current-menu-item > a, #main-menu ul li.current_page_item > a, #main-menu ul li.current-menu-parent > a, #main-menu ul li.current_page_ancestor > a, #main-menu ul li.current-menu-ancestor > a, .social-links a:hover, .post-meta i, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price,.scroll-up a:hover{
+	color: #7abf18;
+}
+.slider .owl-carousel button.owl-dot{
+	border-color: #7abf18;
+}
+span.onsale, .box-content a.button:hover, .box .box-content, .woocommerce a.button:hover, .scroll-up a:hover, nav.woocommerce-MyAccount-navigation ul li:hover, .woocommerce ul.products li.product .onsale, .woocommerce span.onsale, .comment-respond input#submit:hover, .comment-reply a:hover, .woocommerce .cart .button:hover, .woocommerce a.button.alt:hover, a.shop-btn:hover, .woocommerce button.button.alt:hover, p.slider_btn a:hover, .woocommerce button.button:hover, .sidebar-area .tagcloud a:hover, footer.footer-panel, .woocommerce a.added_to_cart:hover, .woocommerce #respond input#submit:hover{
+	background: #000000;
+}
+.slider .owl-carousel button.owl-dot.active, .sidebar-area h4.title {
+    border-color: #000000;
+}
+h1, h2, h3, h4, h5, h6,a,.logo a,#main-menu ul li a,.header-search .open-search-form i,.logo span,#main-menu ul.children li a, #main-menu ul.sub-menu li a{
+	color: #000000;
+}
+
+
+a:hover{
+	color: #000;
+}
+
+.wp-block-button__link, p.wp-block-tag-cloud a {
+    background: #7abf18;
+    color: #fff !important;
+}
+.sidebar-area h4.title,
+.sidebar-area h1.wp-block-heading,
+.sidebar-area h2.wp-block-heading,
+.sidebar-area h3.wp-block-heading,
+.sidebar-area h4.wp-block-heading,
+.sidebar-area h5.wp-block-heading,
+.sidebar-area h6.wp-block-heading,
+.sidebar-area .wp-block-search__label {
+    padding: 20px 15px;
+    color: #fff;
+    font-size: 22px;
+    background: #7abf18;
+    border-left: solid 5px #1e1f1f;
+}
+footer .sidebar-area h4.title{
+	padding: 0px;
+    background: unset;
+    border-left: unset;
+}
+footer .wp-block-search__label, footer .sidebar-area h1.wp-block-heading, footer .sidebar-area h2.wp-block-heading, footer .sidebar-area h3.wp-block-heading, footer .sidebar-area h4.wp-block-heading, footer .sidebar-area h5.wp-block-heading, footer .sidebar-area h6.wp-block-heading{
+	background: none !important;
+	border-left: none !important; 
+}
+footer .sidebar-area form{
+	padding: 0px;
+}
+.sidebar-area .wp-block-search__button {
+    background: #7abf18;
+}
+a.shop-btn:hover{
+	color: #fff;
+}
+.wc-block-components-button:not(.is-link){
+	border-radius: 0px;
+}
+.wc-block-components-button:not(.is-link):hover{
+	border-radius: 0px;
+	background: #000;
+}
+
+.triangle35b:nth-child(1) {
+  --angle:0deg;
+  background:#7abf18;
+  animation-delay:0.4s;
+}
+.triangle35b:nth-child(2) {
+  --angle:90deg;
+  background:#fff;
+  animation-delay:0.2s;
+}
+.triangle35b:nth-child(3) {
+  --angle:180deg;
+  background:#7abf18;
+}
+
+header.woocommerce-Address-title.title a {
+    background: #7abf18;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+	.page-template-frontpage .header-box {
+	    position: static;
+	}
+	.logo-image {
+	    float: none;
+	    text-align: center;
+	}
+	.menu-toggle, .dropdown-toggle,button.close-menu{
+		background: #7abf18 !important;
+	}
+	.features {
+	    position: static;
+	    margin-top: 10%;
+	}
+  .contact-box span{
+    margin-right: 30px;
+  }
+  .admin-bar .sticky-header.fixed-header{
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px){
+	.page-template-frontpage .header-box {
+	    position: static;
+	}
+	.features {
+	    position: static;
+	    margin-top: 5%;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px){
+	.page-template-frontpage .header-box {
+	    position: static;
+	}
+}

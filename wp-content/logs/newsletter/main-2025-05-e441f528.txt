@@ -1,0 +1,2 @@
+11-05-2025 01:23:11 - ERROR - 8.6.4 - 43.5 MB/256 MB - [cron] > cURL error 28: Resolving timed out after 5001 milliseconds (http_request_failed) - 
+14-05-2025 13:27:12 - ERROR - 8.6.4 - 46.2 MB/256 MB - [cron] > cURL error 28: Resolving timed out after 5000 milliseconds (http_request_failed) - 

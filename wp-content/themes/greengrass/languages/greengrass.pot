@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Greengrass\n"
+"POT-Creation-Date: 2023-06-02 15:48+0530\n"
+"PO-Revision-Date: 2023-06-02 15:48+0530\n"
+"Last-Translator: \n"
+"Language-Team: Flythemes Team <support@flythemes.net>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;esc_html_e;esc_attr_e;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: block-patterns.php:17
+msgid "Greengrass"
+msgstr ""
+
+#: inc/about.php:48
+msgid "Free Full Site Editing WordPress Theme"
+msgstr ""
+
+#: inc/about.php:59
+msgid "Getting Started with Greengrass!"
+msgstr ""
+
+#: inc/about.php:60
+msgid ""
+"Awesome! Greengrass has been installed and activated successfully. Now, you "
+"can start building your dream website with a wide range of highly-"
+"customizable block patterns, templates, and template parts available in this "
+"astounding theme."
+msgstr ""
+
+#: inc/about.php:66
+msgid "More Features with Greengrass Pro Theme"
+msgstr ""
+
+#: inc/about.php:67
+msgid ""
+"To get more features and unique home page sections, we recommend you "
+"activate the Greengrass Pro. With the pro theme installed, get more options "
+"like google fonts, colors, sliders, page template, shortcodes and more."
+msgstr ""
+
+#: inc/about.php:68
+msgid "Buy Greengrass Pro"
+msgstr ""
+
+#: inc/about.php:77
+msgid "Important Links"
+msgstr ""
+
+#: inc/about.php:78
+msgid "Theme Info"
+msgstr ""
+
+#: inc/about.php:79
+msgid "View Demo"
+msgstr ""
+
+#: inc/about.php:80
+msgid "Support"
+msgstr ""
+
+#: inc/about.php:87
+msgid "Leave us a review"
+msgstr ""
+
+#: inc/about.php:88
+msgid ""
+"Loved Greengrass? Feel free to leave your feedback. Your opinion helps us "
+"reach more audiences!"
+msgstr ""
+
+#: inc/about.php:89
+msgid "Review"
+msgstr ""
+
+#: patterns/404.php:12
+msgid "404"
+msgstr ""
+
+#: patterns/404.php:16
+msgid "Page not found!"
+msgstr ""
+
+#: patterns/404.php:20
+msgid "Sorry, the page you are looking for does not exist or has been moved."
+msgstr ""
+
+#: patterns/404.php:25
+msgid "Return Home"
+msgstr ""
+
+#: patterns/archive.php:54
+msgid "Sorry, No posts exists..."
+msgstr ""
+
+#: patterns/archive.php:65
+#: patterns/single.php:63
+msgid "Search"
+msgstr ""
+
+#: patterns/archive.php:75
+#: patterns/single.php:73
+msgid "Popular Posts"
+msgstr ""
+
+#: patterns/archive.php:99
+#: patterns/single.php:97
+msgid "Categories"
+msgstr ""
+
+#: patterns/archive.php:109
+#: patterns/single.php:107
+msgid "Archives"
+msgstr ""
+
+#: patterns/archive.php:119
+#: patterns/single.php:117
+msgid "Tags"
+msgstr ""
+
+#: patterns/banner.php:16
+msgid "Lets Start Your Gardening"
+msgstr ""
+
+#: patterns/banner.php:20
+msgid ""
+"Pellentesque ultrices, ligula sit amet dictum vehicula, odio erat venenatis "
+"odio, ac placerat nisi risus a nisi. In et mi et ex ornare malesuada. In "
+"tempor tellus turpis, et feugiat odio elementum ut."
+msgstr ""
+
+#: patterns/banner.php:25
+msgid "GET A QUOTE"
+msgstr ""
+
+#: patterns/footer.php:16
+msgid "Contact Greengrass"
+msgstr ""
+
+#: patterns/footer.php:29
+#: patterns/header.php:23
+msgid "263 Cherry Tree Drive, Florida."
+msgstr ""
+
+#: patterns/footer.php:39
+#: patterns/header.php:55
+msgid "904-655-0755"
+msgstr ""
+
+#: patterns/footer.php:49
+#: patterns/header.php:39
+msgid "greengrass@support.com"
+msgstr ""
+
+#: patterns/footer.php:67
+msgid "Useful Links"
+msgstr ""
+
+#: patterns/footer.php:75
+msgid "Home"
+msgstr ""
+
+#: patterns/footer.php:79
+msgid "About Us"
+msgstr ""
+
+#: patterns/footer.php:83
+msgid "Services"
+msgstr ""
+
+#: patterns/footer.php:87
+msgid "Blog"
+msgstr ""
+
+#: patterns/footer.php:91
+msgid "Contact Us"
+msgstr ""
+
+#: patterns/footer.php:97
+msgid "Newsletter"
+msgstr ""
+
+#: patterns/footer.php:105
+msgid "We wont span you. You may withdraw your consent at any time!"
+msgstr ""
+
+#: patterns/footer.php:115
+msgid "Gallery"
+msgstr ""
+
+#: patterns/footer.php:158
+msgid "© Copyright 2023. All Rights Reserved."
+msgstr ""
+
+#: patterns/footer.php:162
+msgid "Proudly powered by"
+msgstr ""
+
+#: patterns/footer.php:162
+msgid "Fly Themes"
+msgstr ""
+
+#: patterns/footer.php:162
+msgid "and"
+msgstr ""
+
+#: patterns/footer.php:162
+msgid "https://wordpress.org"
+msgstr ""
+
+#: patterns/footer.php:162
+msgid "WordPress"
+msgstr ""
+
+#: patterns/header.php:95
+msgid "Get A Quote"
+msgstr ""
+
+#: patterns/latest-news.php:13
+msgid "Blogs &amp; News"
+msgstr ""
+
+#: patterns/latest-news.php:17
+msgid "Latest News &amp; Updates"
+msgstr ""
+
+#: patterns/latest-news.php:41
+msgid "2 Comments"
+msgstr ""
+
+#: patterns/latest-news.php:56
+msgid "There is no post found"
+msgstr ""
+
+#: patterns/quote.php:16
+msgid "Get A Free Quote"
+msgstr ""
+
+#: patterns/quote.php:20
+msgid "Can Easily Get a Estimated Quote."
+msgstr ""
+
+#: patterns/quote.php:26
+msgid "Get 20% Off on Lawn Fertilization"
+msgstr ""
+
+#: patterns/quote.php:30
+msgid ""
+"Fusce nec scelerisque risus. Lorem ipsum dolor sit amet, consectetur "
+"adip1iscing elit. Praesent leo urna, luctus a mattis sed, pretium et dolor."
+msgstr ""
+
+#: patterns/quote.php:35
+msgid "Book An Appointment"
+msgstr ""
+
+#: patterns/quote.php:45
+msgid "Request For Free Quote"
+msgstr ""
+
+#: patterns/quote.php:49
+msgid ""
+"Fusce nec scelerisque risus. Lorem ipsum dolor sit amet, consectetur "
+"adipiscing elit. Praesent leo urna, luctus a mattis sed, pretium et dolor."
+msgstr ""
+
+#: patterns/services.php:13
+msgid "We Give Awesome &amp; Amazing"
+msgstr ""
+
+#: patterns/services.php:17
+msgid "Landscaping &amp; Gardening Services"
+msgstr ""
+
+#: patterns/services.php:21
+msgid ""
+"Vestibulum fermentum quam a est ullamcorper suscipit ut at velit. Quisque "
+"aliquet interdum ligula, eu suscipit elit sodales sit amet. <br>Vestibulum "
+"consequat eget ante vel tincidunt."
+msgstr ""
+
+#: patterns/services.php:46
+#: patterns/services.php:142
+msgid "Landscaping"
+msgstr ""
+
+#: patterns/services.php:50
+#: patterns/services.php:82
+#: patterns/services.php:114
+#: patterns/services.php:146
+msgid "Vestibulum fermentum quam a est ullamcorper suscipit ut at velit."
+msgstr ""
+
+#: patterns/services.php:55
+msgid "01"
+msgstr ""
+
+#: patterns/services.php:78
+msgid "Gardening"
+msgstr ""
+
+#: patterns/services.php:87
+msgid "02"
+msgstr ""
+
+#: patterns/services.php:110
+msgid "Maintenance"
+msgstr ""
+
+#: patterns/services.php:119
+msgid "03"
+msgstr ""
+
+#: patterns/services.php:151
+msgid "04"
+msgstr ""
+
+#: patterns/team.php:13
+msgid "Our Team"
+msgstr ""
+
+#: patterns/team.php:17
+msgid "Expert Gardeners"
+msgstr ""
+
+#: patterns/team.php:50
+msgid "Jessica Brown"
+msgstr ""
+
+#: patterns/team.php:54
+msgid "Owner"
+msgstr ""
+
+#: patterns/team.php:84
+msgid "Clark Brown"
+msgstr ""
+
+#: patterns/team.php:88
+msgid "Technical"
+msgstr ""
+
+#: patterns/team.php:118
+msgid "Alena Maria"
+msgstr ""
+
+#: patterns/team.php:122
+msgid "Planter"
+msgstr ""
+
+#: patterns/team.php:152
+msgid "William Matthews"
+msgstr ""
+
+#: patterns/team.php:156
+msgid "Senior Gardener"
+msgstr ""

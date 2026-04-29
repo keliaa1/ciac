@@ -1,0 +1,39 @@
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 39.4 MB/128 MB - ciacrw1 > Start upgrade from 8.1.1
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.4 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.4 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_logs`] => Created table `oJegmj1Sz_newsletter_logs`
+)
+
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Deleting settings backup newsletter_backup_0.0.0
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > Backing up options of 8.1.1
+27-03-2024 11:31:52 - INFO  - 8.2.4 - 42.5 MB/128 MB - ciacrw1 > End

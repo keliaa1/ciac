@@ -1,0 +1,40 @@
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 51.4 MB/128 MB -  > Start upgrade from 8.5.5
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_logs`] => Created table `oJegmj1Sz_newsletter_logs`
+    [oJegmj1Sz_newsletter_logs.status] => Changed type of oJegmj1Sz_newsletter_logs.status from int(11) to int
+)
+
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Deleting settings backup newsletter_backup_8.0.8
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > Backing up options of 8.5.5
+19-12-2024 06:05:57 - INFO  - 8.6.4 - 55.5 MB/128 MB -  > End

@@ -1,0 +1,39 @@
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 44.1 MB/128 MB - ciacrw1 > Start upgrade from 8.4.7
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Array
+(
+    [`oJegmj1Sz_newsletter_logs`] => Created table `oJegmj1Sz_newsletter_logs`
+    [oJegmj1Sz_newsletter_logs.status] => Changed type of oJegmj1Sz_newsletter_logs.status from int(11) to int
+)
+
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > Backing up options of 8.4.7
+18-09-2024 11:21:53 - INFO  - 8.5.0 - 47.2 MB/128 MB - ciacrw1 > End

@@ -1,0 +1,99 @@
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 35.5 MB/256 MB - admin > Start upgrade from 0.0.0
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > Backing up options of 0.0.0
+16-01-2024 15:39:29 - INFO  - 8.0.7 - 36.0 MB/256 MB - admin > End
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 44.0 MB/128 MB -  > Start upgrade from 8.0.7
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > Backing up options of 8.0.7
+23-01-2024 12:54:02 - INFO  - 8.0.8 - 48.0 MB/128 MB -  > End
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 38.4 MB/128 MB - admin > Start upgrade from 8.0.8
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_emails`] => Created table `oJegmj1Sz_newsletter_emails`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_sent`] => Created table `oJegmj1Sz_newsletter_sent`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter`] => Created table `oJegmj1Sz_newsletter`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_user_logs`] => Created table `oJegmj1Sz_newsletter_user_logs`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_user_meta`] => Created table `oJegmj1Sz_newsletter_user_meta`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Array
+(
+    [`oJegmj1Sz_newsletter_stats`] => Created table `oJegmj1Sz_newsletter_stats`
+)
+
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > Backing up options of 8.0.8
+25-01-2024 05:55:52 - INFO  - 8.0.9 - 41.5 MB/128 MB - admin > End
