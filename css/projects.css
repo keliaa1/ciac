@@ -231,7 +231,7 @@
 }
 
 .stat-label {
-  font-family: 'Courier New', Courier, monospace; /* Design uses typewriter-ish font for labels here */
+  font-family: var(--font-body); /* Changed from Courier New to Poppins */
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
