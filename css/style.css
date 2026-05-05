@@ -249,6 +249,57 @@ header {
   gap: 1.5rem;
 }
 
+/* Hero Dropdowns */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 15px;
+  background-color: var(--white);
+  min-width: 320px;
+  box-shadow: var(--shadow-lg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  z-index: 100;
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+.dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  transform: rotate(45deg);
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content p {
+  margin: 0 !important;
+  font-size: 0.95rem;
+  color: var(--gray-text) !important;
+  line-height: 1.6;
+  font-family: var(--font-body);
+}
+
 .hero-image-container {
   position: relative;
 }
@@ -313,7 +364,7 @@ header {
 /* Stats Section */
 .stats {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin: 4rem 0;
   width: 90%;
@@ -559,7 +610,9 @@ header {
 .partner-logo {
   filter: grayscale(100%);
   opacity: 0.6;
-  height: 40px;
+  height: 90px;
+  max-width: 250px;
+  object-fit: contain;
   transition: var(--transition);
 }
 
@@ -1106,7 +1159,7 @@ footer {
     gap: 3rem;
   }
   .stats {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

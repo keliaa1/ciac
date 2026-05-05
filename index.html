@@ -37,8 +37,18 @@
           <h1>Building a Sustainable <br><span class="italic">Future</span></h1>
           <p>Leading the charge in sustainable development and community resilience across the Land of a Thousand Hills through world-class stewardship.</p>
           <div class="hero-btns">
-            <a href="#" class="btn btn-primary">Our Mission</a>
-            <a href="#" class="btn btn-vision">Our Vision</a>
+            <div class="dropdown">
+              <button class="btn btn-primary" onclick="toggleDropdown(event, 'mission-dropdown')">Our Mission</button>
+              <div id="mission-dropdown" class="dropdown-content">
+                <p>To empower communities across Rwanda through sustainable development, education, and innovative stewardship of our natural resources.</p>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-vision" onclick="toggleDropdown(event, 'vision-dropdown')">Our Vision</button>
+              <div id="vision-dropdown" class="dropdown-content">
+                <p>A thriving, resilient Rwanda where every community has the resources to grow, protect their environment, and build a prosperous future.</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero-image-container">
@@ -56,10 +66,7 @@
           <h2>12K+</h2>
           <p>Families Supported</p>
         </div>
-        <div class="stat-card">
-          <h2>450</h2>
-          <p>Women Supported</p>
-        </div>
+
         <div class="stat-card">
           <h2>1.2M</h2>
           <p>Hectares Protected</p>
@@ -103,7 +110,7 @@
             </div>
           </div>
 
-          <a href="#" class="btn btn-primary">Read Our Story</a>
+          <a href="about.html" class="btn btn-primary">Read Our Story</a>
         </div>
       </section>
 
@@ -147,9 +154,10 @@
         <h2>OUR <span>PARTNERS</span></h2>
         <p>Our partners are valued collaborators who support our mission through resources, expertise, and shared commitment to sustainable community impact.</p>
         <div class="partners-grid">
-          <img src="images/partner1.png" alt="Partner 1" class="partner-logo">
-          <img src="images/partner2.jpg" alt="Partner 2" class="partner-logo">
-          <img src="images/partner3.png" alt="Partner 3" class="partner-logo">
+          <img src="images/logo-wageningen-part1.png" alt="Wageningen ndiza Foundation" class="partner-logo">
+          <img src="images/dibcoop-logo-part2.png" alt="DIBcoop" class="partner-logo">
+          <img src="images/agroplast-logo-part3.jpg" alt="AgroPlast Ltd" class="partner-logo">
+          <img src="images/iffs-logo-part4.png" alt="IFFS International" class="partner-logo">
         </div>
       </section>
 
@@ -169,7 +177,6 @@
         <div class="footer-grid">
           <div class="footer-col" style="flex: 2">
             <a href="index.html" class="logo" style="margin-bottom: 2rem; display: flex;">
-              <img src="images/logo.png" alt="CIAC Rwanda Logo" />
               <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-green); font-style: italic;">CIAC Rwanda</span>
             </a>
             <p style="max-width: 300px">
@@ -232,6 +239,47 @@
         section.style.transition = "all 0.8s ease-out";
         observer.observe(section);
       });
+
+      // Dropdown logic
+      function toggleDropdown(event, id) {
+        event.preventDefault();
+        event.stopPropagation();
+        const dropdown = document.getElementById(id);
+        const allDropdowns = document.querySelectorAll('.dropdown-content');
+        
+        allDropdowns.forEach(d => {
+          if (d.id !== id) {
+            d.classList.remove('show');
+            // Wait for transition to finish before hiding display
+            setTimeout(() => { if (!d.classList.contains('show')) d.style.display = 'none'; }, 300);
+          }
+        });
+
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+          setTimeout(() => { if (!dropdown.classList.contains('show')) dropdown.style.display = 'none'; }, 300);
+        } else {
+          dropdown.style.display = 'block';
+          // Small delay to allow display: block to apply before changing opacity
+          setTimeout(() => { dropdown.classList.add('show'); }, 10);
+        }
+      }
+
+      // Close dropdowns when clicking outside
+      window.onclick = function(event) {
+        if (!event.target.closest('.dropdown')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+              (function(d) {
+                setTimeout(() => { if (!d.classList.contains('show')) d.style.display = 'none'; }, 300);
+              })(openDropdown);
+            }
+          }
+        }
+      }
     </script>
   </body>
 </html>
