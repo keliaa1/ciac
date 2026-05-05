@@ -26,7 +26,7 @@
           <li><a href="newsletter.html" class="active">Newsletter</a></li>
         </ul>
       </nav>
-      <a href="#" class="btn btn-primary">Get Involved</a>
+      <a href="contact.html" class="btn btn-primary">Get Involved</a>
     </div>
   </header>
 
@@ -79,17 +79,17 @@
       <div class="dispatches-header">
         <h2 style="font-family:var(--font-heading); font-size:2rem;">Latest Dispatches</h2>
         <div class="dispatches-filters" style="display: flex; flex-wrap: wrap;">
-          <button class="filter-btn active">All Stories</button>
-          <button class="filter-btn">Environment management.</button>
-          <button class="filter-btn">Climate change adaptation</button>
-          <button class="filter-btn">Conflict management</button>
-          <button class="filter-btn">Good governance</button>
+          <button class="filter-btn active" data-filter="all">All Stories</button>
+          <button class="filter-btn" data-filter="environment management.">Environment management.</button>
+          <button class="filter-btn" data-filter="climate change adaptation">Climate change adaptation</button>
+          <button class="filter-btn" data-filter="conflict management">Conflict management</button>
+          <button class="filter-btn" data-filter="good governance">Good governance</button>
         </div>
       </div>
 
       <div class="dispatches-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
         <!-- Dispatch 1 -->
-        <article class="dispatch-card">
+        <article class="dispatch-card" data-category="environment management.">
           <div class="img-container">
             <span class="badge" style="font-size:0.55rem;">Environment management.</span>
             <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Environment">
@@ -101,7 +101,7 @@
         </article>
 
         <!-- Dispatch 2 -->
-        <article class="dispatch-card">
+        <article class="dispatch-card" data-category="climate change adaptation">
           <div class="img-container">
             <span class="badge" style="font-size:0.55rem;">Climate change adaptation</span>
             <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80" alt="Seedlings">
@@ -113,7 +113,7 @@
         </article>
 
         <!-- Dispatch 3 -->
-        <article class="dispatch-card">
+        <article class="dispatch-card" data-category="conflict management">
           <div class="img-container">
             <span class="badge" style="font-size:0.55rem;">Conflict management</span>
             <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=80" alt="Farmer smiling">
@@ -125,7 +125,7 @@
         </article>
 
         <!-- Dispatch 4 -->
-        <article class="dispatch-card">
+        <article class="dispatch-card" data-category="good governance">
           <div class="img-container">
             <span class="badge" style="font-size:0.55rem;">Good governance</span>
             <img src="https://images.unsplash.com/photo-1520697830682-8f129e1bfa82?auto=format&fit=crop&w=600&q=80" alt="Governance">
@@ -202,7 +202,30 @@
   </footer>
 
   <script>
-    // Simple basic form submission intercept
+    // Filter logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.dispatch-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = '';
+            card.style.animation = 'fadeIn 0.4s ease';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Newsletter form submission
     document.getElementById('newsletterForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const email = this.elements.email.value;

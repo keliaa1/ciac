@@ -491,7 +491,7 @@ header {
 
 /* Domains Section */
 .domains {
-  padding: 6rem 0;
+  padding: 3rem 0;
   text-align: center;
 }
 
@@ -513,7 +513,13 @@ header {
   gap: 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+
+.domain-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .domain-card {
@@ -524,27 +530,31 @@ header {
   border-top: 4px solid var(--primary-green);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  height: 100%;
 }
 
-.domain-card:nth-child(1) {
+.domain-card-link:nth-child(1) {
   grid-column: 1 / span 5;
 }
-.domain-card:nth-child(2) {
+.domain-card-link:nth-child(2) {
   grid-column: 7 / span 5;
-  transform: translateY(50px);
+  transform: translateY(10px);
 }
-.domain-card:nth-child(3) {
+.domain-card-link:nth-child(3) {
   grid-column: 2 / span 5;
   margin-top: 2rem;
 }
-.domain-card:nth-child(4) {
+.domain-card-link:nth-child(4) {
   grid-column: 8 / span 5;
-  transform: translateY(50px);
+  transform: translateY(10px);
   margin-top: 2rem;
 }
 
-.domain-card:hover {
-  transform: translateY(-10px);
+.domain-card:hover,
+.domain-card-link:hover .domain-card {
+  transform: translateY(-4px);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
 }
 
 .domain-icon {

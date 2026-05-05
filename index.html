@@ -26,7 +26,7 @@
             <li><a href="newsletter.html">Newsletter</a></li>
           </ul>
         </nav>
-        <a href="#" class="btn btn-primary">Get Involved</a>
+        <a href="contact.html" class="btn btn-primary">Get Involved</a>
       </div>
     </header>
 
@@ -118,34 +118,42 @@
       <section class="domains container">
         <h2>CIAC's intervention <span>domains:</span></h2>
         <div class="domains-grid">
-          <div class="domain-card">
-            <div class="domain-icon">
-              <img src="images/dom1.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+          <a href="project-category.html?category=Environment+management." class="domain-card-link">
+            <div class="domain-card">
+              <div class="domain-icon">
+                <img src="images/dom1.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <h3>Environment management.</h3>
+              <p>Providing smallholder farmers with regenerative tools and climate-resilient crop varieties.</p>
             </div>
-            <h3>Environment management.</h3>
-            <p>Providing smallholder farmers with regenerative tools and climate-resilient crop varieties.</p>
-          </div>
-          <div class="domain-card">
-            <div class="domain-icon">
-              <img src="images/dom2.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+          </a>
+          <a href="project-category.html?category=Climate+change+adaptation" class="domain-card-link">
+            <div class="domain-card">
+              <div class="domain-icon">
+                <img src="images/dom2.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <h3>Climate change adaptation and mitigation</h3>
+              <p>Training the next generation of Rwandan artisans and technicians through specialized workshops.</p>
             </div>
-            <h3>Climate change adaptation and mitigation</h3>
-            <p>Training the next generation of Rwandan artisans and technicians through specialized workshops.</p>
-          </div>
-          <div class="domain-card">
-            <div class="domain-icon">
-              <img src="images/dom3.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+          </a>
+          <a href="project-category.html?category=Maternal+Health" class="domain-card-link">
+            <div class="domain-card">
+              <div class="domain-icon">
+                <img src="images/dom3.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <h3>Maternal Health</h3>
+              <p>Expanding rural clinics to provide comprehensive pre and post-natal care services.</p>
             </div>
-            <h3>Maternal Health</h3>
-            <p>Expanding rural clinics to provide comprehensive pre and post-natal care services.</p>
-          </div>
-          <div class="domain-card">
-            <div class="domain-icon">
-              <img src="images/dom4.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+          </a>
+          <a href="project-category.html?category=Conflict+management" class="domain-card-link">
+            <div class="domain-card">
+              <div class="domain-icon">
+                <img src="images/dom4.png" alt="Domain Icon" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+              <h3>Conflict management</h3>
+              <p>Implementing solar-powered water filtration systems in remote highland villages.</p>
             </div>
-            <h3>Conflict management</h3>
-            <p>Implementing solar-powered water filtration systems in remote highland villages.</p>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -166,7 +174,7 @@
         <div class="container">
           <h2>Ready to make a world-class difference?</h2>
           <p>Every contribution fields a locally-led project that transforms lives. Join us in building Rwanda's resilient future today.</p>
-          <a href="#" class="btn btn-white">Become a Partner</a>
+          <a href="contact.html" class="btn btn-white">Become a Partner</a>
         </div>
       </section>
     </main>
@@ -246,7 +254,7 @@
         event.stopPropagation();
         const dropdown = document.getElementById(id);
         const allDropdowns = document.querySelectorAll('.dropdown-content');
-        
+
         allDropdowns.forEach(d => {
           if (d.id !== id) {
             d.classList.remove('show');

@@ -16,13 +16,8 @@ define( 'DB_COLLATE', '' );
 
 
 
-if ( isset( $_SERVER['HTTP_HOST'] ) ) {
-    $ciac_host = $_SERVER['HTTP_HOST'];
-    if ( $ciac_host === 'ciac.local' || $ciac_host === 'ciac.local' ) {
-        define( 'WP_HOME', 'http://ciac-rwanda3.local/' );
-        define( 'WP_SITEURL', 'http://ciac-rwanda3.local/' );
-    }
-}
+define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/' );
+define( 'WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/' );
 
 
 define('AUTH_KEY',         'L7z%f%yf&5G_O9KMb_nysv:j9F3c5MM(U3wH5I#M0IpO-592Ful&m%Ba;Z0sSn4R');
@@ -55,9 +50,9 @@ define('DISABLE_WP_CRON', false);
 define('WP_AUTO_UPDATE_CORE', 'minor');
 
 
-define('WP_DEBUG', false);
-define('WP_DEBUG_LOG', false);
-define('WP_DEBUG_DISPLAY', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', true);
 define('SCRIPT_DEBUG', false);
 define('CONCATENATE_SCRIPTS', true);
 define('COMPRESS_SCRIPTS', true);
@@ -77,11 +72,11 @@ define('DISALLOW_UNFILTERED_HTML', true);
 @ini_set('session.cookie_samesite', 'Strict');
 
 
-define('CUSTOM_USER_TABLE', $table_prefix . 'users');
-define('CUSTOM_USER_META_TABLE', $table_prefix . 'usermeta');
+// define('CUSTOM_USER_TABLE', $table_prefix . 'users');
+// define('CUSTOM_USER_META_TABLE', $table_prefix . 'usermeta');
 
 
-define('WP_ALLOW_MULTISITE', true);
+// define('WP_ALLOW_MULTISITE', true);
 // define('MULTISITE', true);
 // define('SUBDOMAIN_INSTALL', false);
 // define( 'DOMAIN_CURRENT_SITE', 'ciac-rwanda3.local' );

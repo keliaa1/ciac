@@ -113,30 +113,30 @@ RewriteRule .* - [R=403,L]
 # ================================================
 # 🔐 LOGIN PROTECTION - RATE LIMITING
 # ================================================
-<IfModule mod_rewrite.c>
-    # Protect wp-login.php
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
-    RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
-    RewriteCond %{REMOTE_ADDR} !^::1
-    RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_ [NC]
-    
-    # Rate limiting - 5 attempts per minute
-    RewriteCond %{ENV:RATE_LIMIT_BLOCK} !1
-    RewriteCond %{TIME_SEC} \d{2}$
-    RewriteRule .* - [F]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     # Protect wp-login.php
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
+#     RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
+#     RewriteCond %{REMOTE_ADDR} !^::1
+#     RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_ [NC]
+#     
+#     # Rate limiting - 5 attempts per minute
+#     RewriteCond %{ENV:RATE_LIMIT_BLOCK} !1
+#     RewriteCond %{TIME_SEC} \d{2}$
+#     RewriteRule .* - [F]
+# </IfModule>
 
 # ================================================
 # 🔐 PROTECT LOST PASSWORD FORM
 # ================================================
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php [NC]
-    RewriteCond %{QUERY_STRING} action=(lostpassword|rp|resetpass) [NC]
-    RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
-    RewriteCond %{REMOTE_ADDR} !^::1
-    RewriteRule .* - [F]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php [NC]
+#     RewriteCond %{QUERY_STRING} action=(lostpassword|rp|resetpass) [NC]
+#     RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
+#     RewriteCond %{REMOTE_ADDR} !^::1
+#     RewriteRule .* - [F]
+# </IfModule>
 
 # ================================================
 # 🔐 BLOCK COMMON ATTACK PATTERNS
