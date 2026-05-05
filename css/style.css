@@ -627,39 +627,9 @@ header {
   padding: 6rem 0;
   text-align: center;
   color: var(--white);
-  position: relative;
-  overflow: hidden;
 }
 
-.cta-banner::before,
-.cta-banner::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: auto;
-  opacity: 0.4;
-  z-index: 1;
-}
 
-.cta-banner::before {
-  top: -40px;
-  left: -40px;
-  background-image: url("../images/ctadeco1.png");
-  width: 200px;
-  height: 200px;
-  opacity: 0.8;
-}
-
-.cta-banner::after {
-  bottom: -40px;
-  right: -40px;
-  background-image: url("../images/ctadeco2.png");
-  width: 200px;
-  height: 200px;
-  opacity: 0.8;
-}
 
 .cta-banner h2 {
   font-size: 3rem;
