@@ -70,3 +70,15 @@
   height: 16px;
   fill: currentColor;
 }
+
+@media (max-width: 768px) {
+  .error-section {
+    margin: 4rem auto;
+  }
+  .error-section h1 {
+    font-size: 3rem;
+  }
+  .error-section p {
+    font-size: 0.9rem;
+  }
+}
