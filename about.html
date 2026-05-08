@@ -15,7 +15,7 @@
           <img src="images/logo.png" alt="CIAC Rwanda Logo" />
           <span class="logo-text">CIAC Rwanda</span>
         </a>
-        <nav>
+        <nav class="nav-wrapper">
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About Us</a></li>
@@ -24,8 +24,13 @@
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="newsletter.html">Newsletter</a></li>
           </ul>
+          <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
         </nav>
-        <a href="contact.html" class="btn btn-primary">Get Involved</a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </header>
 
@@ -269,6 +274,15 @@
         } else {
           header.classList.remove('header-scrolled');
         }
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navWrapper = document.querySelector('.nav-wrapper');
+
+      mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navWrapper.classList.toggle('active');
       });
 
       // Reveal on scroll

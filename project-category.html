@@ -16,19 +16,24 @@
         <img src="images/logo.png" alt="CIAC Rwanda Logo" />
         <span class="logo-text">CIAC Rwanda</span>
       </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="btn btn-primary">Get Involved</a>
-    </div>
-  </header>
+        <nav class="nav-wrapper">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
 
   <main class="container">
     <!-- Projects Header Section -->
@@ -120,6 +125,15 @@
       } else {
         header.classList.remove('header-scrolled');
       }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    mobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      navWrapper.classList.toggle('active');
     });
 
     // Logic to simulate dynamic category view

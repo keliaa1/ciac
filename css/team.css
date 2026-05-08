@@ -86,3 +86,34 @@
   color: white;
   border-color: var(--primary-green);
 }
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-header h1 {
+    font-size: 3rem !important;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-photo {
+    height: 350px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-name {
+    font-size: 1.25rem;
+  }
+  .team-role {
+    font-size: 0.65rem;
+  }
+  .team-bio {
+    font-size: 0.8rem;
+  }
+}

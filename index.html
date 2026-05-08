@@ -16,7 +16,7 @@
           <img src="images/logo.png" alt="CIAC Rwanda Logo" />
           <span class="logo-text">CIAC Rwanda</span>
         </a>
-        <nav>
+        <nav class="nav-wrapper">
           <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -25,8 +25,13 @@
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="newsletter.html">Newsletter</a></li>
           </ul>
+          <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
         </nav>
-        <a href="contact.html" class="btn btn-primary">Get Involved</a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </header>
 
@@ -40,12 +45,14 @@
             <div class="dropdown">
               <button class="btn btn-primary" onclick="toggleDropdown(event, 'mission-dropdown')">Our Mission</button>
               <div id="mission-dropdown" class="dropdown-content">
+                <button class="dropdown-close" onclick="closeDropdown('mission-dropdown')">&times;</button>
                 <p>To empower communities across Rwanda through sustainable development, education, and innovative stewardship of our natural resources.</p>
               </div>
             </div>
             <div class="dropdown">
               <button class="btn btn-vision" onclick="toggleDropdown(event, 'vision-dropdown')">Our Vision</button>
               <div id="vision-dropdown" class="dropdown-content">
+                <button class="dropdown-close" onclick="closeDropdown('vision-dropdown')">&times;</button>
                 <p>A thriving, resilient Rwanda where every community has the resources to grow, protect their environment, and build a prosperous future.</p>
               </div>
             </div>
@@ -265,6 +272,15 @@
         }
       });
 
+      // Mobile Menu Toggle
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navWrapper = document.querySelector('.nav-wrapper');
+
+      mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navWrapper.classList.toggle('active');
+      });
+
       // Reveal on scroll
       const observerOptions = {
         threshold: 0.1
@@ -309,6 +325,12 @@
           // Small delay to allow display: block to apply before changing opacity
           setTimeout(() => { dropdown.classList.add('show'); }, 10);
         }
+      }
+
+      function closeDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.remove('show');
+        setTimeout(() => { if (!dropdown.classList.contains('show')) dropdown.style.display = 'none'; }, 300);
       }
 
       // Close dropdowns when clicking outside
