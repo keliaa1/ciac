@@ -201,4 +201,5 @@ RewriteRule .* - [R=403,L]
 ErrorDocument 400 /index.php?error=400
 ErrorDocument 401 /index.php?error=401
 ErrorDocument 403 /index.php?error=403
+ErrorDocument 404 /404.html
 ErrorDocument 500 /index.php?error=500
