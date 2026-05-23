@@ -1,314 +1,325 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIAC Rwanda - Impact in Every Province</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container header-container">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="CIAC Rwanda Logo" />
-          <span class="logo-text">CIAC Rwanda</span>
-        </a>
-        <nav class="nav-wrapper">
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIAC Rwanda - Impact in Every Province</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="icon" type="image/png" href="/images/logo-og.png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-og.png" alt="CIAC Rwanda Logo" />
+        <span class="logo-text">CIAC Rwanda</span>
+      </a>
+      <nav class="nav-wrapper">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Projects Header Section -->
+    <section class="projects-header">
+      <div class="projects-title">
+        <h1 class="title-primary">
+          Impact in Every<br /><span class="title-italic-green">Province</span>
+        </h1>
+        <p class="subtitle">
+          A showcase of our community-led ecological stewardship and innovative
+          solutions driving Rwanda's green revolution.
+        </p>
+
+        <div style="display: flex; gap: 2.5rem; align-items: center; margin-top: 2rem;">
+          <a href="#projects-grid" class="btn btn-primary"
+            style="padding: 1rem 2rem; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(41, 141, 69, 0.2);">
+            Explore Initiatives
+          </a>
+          <div
+            style="display: flex; flex-direction: column; border-left: 3px solid var(--primary-green); padding-left: 1.5rem;">
+            <span
+              style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--dark-green); line-height: 1.1;">4+</span>
+            <span
+              style="font-size: 0.85rem; font-weight: 600; color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">Core
+              Domains</span>
+          </div>
+        </div>
+      </div>
+      <div class="projects-featured">
+        <img id="heroImg"
+          src="images/project1agro.jpeg"
+          alt="Agroforestry and Farmers Planning in Rutsiro" />
+        <div class="featured-overlay">
+          <h3 id="heroTitle">Agroforestry &amp; Livelihood</h3>
+          <div class="featured-controls">
+            <button id="prevBtn" class="control-btn active">&lsaquo;</button>
+            <button id="nextBtn" class="control-btn">&rsaquo;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="project-badge">Environment · Ongoing</div>
+          <img src="images/project1agro.jpeg"
+            alt="Agroforestry and Farmers Planning in Rutsiro" />
+        </div>
+        <div class="project-meta">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Rutsiro District
+        </div>
+        <h3>Agroforestry &amp; Farmers' Planning for Livelihood Improvement</h3>
+        <p>
+          Environment project: Agroforestry and Farmers' Planning for Livelihood Improvement and Landscape Restoration in Rutsiro.
+        </p>
+        <a href="project-category.html?category=Environment+management" class="link-green">View Project &rarr;</a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="project-badge">Carbon · Ongoing</div>
+          <img src="images/project2carbon.jpeg"
+            alt="Piloting Carbon Scheme in Rulindo District" />
+        </div>
+        <div class="project-meta">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Rulindo District
+        </div>
+        <h3>Piloting Carbon Scheme in Rulindo District</h3>
+        <p>
+          Piloting Carbon Scheme in Rulindo District to foster climate finance and community-based carbon sequestration initiatives.
+        </p>
+        <a href="project-category.html?category=Climate+change+adaptation" class="link-green">View Project &rarr;</a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="project-badge">Reforestation</div>
+          <img src="images/project3tree.jpeg"
+            alt="One Tree per Pupil in Muhanga" />
+        </div>
+        <div class="project-meta">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Muhanga &amp; Karongi
+        </div>
+        <h3>One Tree per Pupil</h3>
+        <p>
+          One tree per pupil in Muhanga Rongi sector and Karongi District — Dibcoopya gakeri, planting a greener future for every child.
+        </p>
+        <a href="project-category.html?category=Reforestation" class="link-green">View Project &rarr;</a>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="project-badge">Agroforestry &amp; PES</div>
+          <img src="images/project4tea.png"
+            alt="Agroforestry and PES with Tea Company" />
+        </div>
+        <div class="project-meta">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Rwanda
+        </div>
+        <h3>Agroforestry &amp; PES with Tea Company</h3>
+        <p>
+          Agroforestry &amp; Payment for Ecosystem Services (PES) in partnership with a Tea Company, integrating sustainable land use with economic incentives.
+        </p>
+        <a href="project-category.html?category=Good+governance+and+Economic+development" class="link-green">View Project &rarr;</a>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="project-badge">Education &amp; Research</div>
+          <img src="images/project5edu.jpeg"
+            alt="Renovation of Classroom in Muhanga Rongi Sector" />
+        </div>
+        <div class="project-meta">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Muhanga, Rongi Sector
+        </div>
+        <h3>Education &amp; Research: Classroom Renovation</h3>
+        <p>
+          Education And Research: Renovation of Classroom in Muhanga, Rongi sector — improving learning environments for the next generation.
+        </p>
+        <a href="project-category.html?category=Education+and+Research" class="link-green">View Project &rarr;</a>
+      </article>
+    </div>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+      <div class="stat-item">
+        <span class="stat-label">Trees Planted</span>
+        <div class="stat-value">1.2M<span>+</span></div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Lives Impacted</span>
+        <div class="stat-value">45k<span>+</span></div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">District Reached</span>
+        <div class="stat-value">30<span>+</span></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="flex: 2">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem; display: flex;">
+            <span
+              style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-green);">CIAC
+              Rwanda</span>
+          </a>
+          <p style="max-width: 300px">
+            Empowering communities for sustainable environmental management
+            and climate resilience across Rwanda.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="#">Government Website</a></li>
+            <li><a href="#">Ministry of Environment</a></li>
+            <li><a href="#">Ministry of Agriculture</a></li>
           </ul>
-          <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
-        </nav>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        </div>
+        <div class="footer-col">
+          <h4>Key Patterns</h4>
+          <ul>
+            <li><a href="#">Wageningen ndiza Foundation</a></li>
+            <li><a href="#">DIBcoop</a></li>
+            <li><a href="#">AgroPlast Ltd</a></li>
+            <li><a href="#">IFFS International</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Office</h4>
+          <p>Kigali-Kicukiro<br />info@ciac.rw<br />+250785507355</p>
+          <div class="social-links">
+            <!-- Globe Icon -->
+            <a href="#"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+              </svg></a>
+            <!-- Mail Icon -->
+            <a href="#"><svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></a>
+            <!-- Share Icon -->
+            <a href="#"><svg viewBox="0 0 24 24">
+                <path
+                  d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+              </svg></a>
+          </div>
         </div>
       </div>
-    </header>
-
-    <main class="container">
-      <!-- Projects Header Section -->
-      <section class="projects-header">
-        <div class="projects-title">
-          <h1 class="title-primary">
-            Impact in Every<br /><span class="title-italic-green"
-              >Province</span
-            >
-          </h1>
-          <p class="subtitle">
-            A showcase of our community-led ecological stewardship and innovative
-            solutions driving Rwanda's green revolution.
-          </p>
-
-          <div style="display: flex; gap: 2.5rem; align-items: center; margin-top: 2rem;">
-            <a href="#projects-grid" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(41, 141, 69, 0.2);">
-              Explore Initiatives
-            </a>
-            <div style="display: flex; flex-direction: column; border-left: 3px solid var(--primary-green); padding-left: 1.5rem;">
-              <span style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--dark-green); line-height: 1.1;">4+</span>
-              <span style="font-size: 0.85rem; font-weight: 600; color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">Core Domains</span>
-            </div>
-          </div>
-        </div>
-        <div class="projects-featured">
-          <!-- Using unsplash placeholder for featured project image -->
-          <img
-            id="heroImg"
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop"
-            alt="Rwanda Landscape"
-          />
-          <div class="featured-overlay">
-            <h3 id="heroTitle">Conservation</h3>
-            <div class="featured-controls">
-              <button id="prevBtn" class="control-btn active">&lsaquo;</button>
-              <button id="nextBtn" class="control-btn">&rsaquo;</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid" id="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-badge">Environment management.</div>
-            <img
-              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
-              alt="Highland Forest Restoration"
-            />
-          </div>
-          <div class="project-meta">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              />
-            </svg>
-            Eastern Province
-          </div>
-          <h3>Highland Forest Restoration</h3>
-          <p>
-            Restoring critical biodiversity corridors across 500 hectares of degraded woodland to combat desertification and support local fauna.
-          </p>
-          <a href="project-category.html?category=Environment+management." class="link-green">View Project &rarr;</a>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-badge">Climate change adaptation</div>
-            <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop"
-              alt="Drought-Resilient Agriculture"
-            />
-          </div>
-          <div class="project-meta">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              />
-            </svg>
-            Southern Province
-          </div>
-          <h3>Drought-Resilient Agriculture</h3>
-          <p>
-            Implementing high-efficiency biomass and regenerative techniques to increase yields while preserving soil health.
-          </p>
-          <a href="project-category.html?category=Climate+change+adaptation" class="link-green">View Project &rarr;</a>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-badge">Conflict management</div>
-            <img
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
-              alt="Community Dialogues Initiative"
-            />
-          </div>
-          <div class="project-meta">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              />
-            </svg>
-            Western Province
-          </div>
-          <h3>Community Dialogues Initiative</h3>
-          <p>
-            Empowering smallholder farmers and community leaders to sustainably share and manage localized water and land resources.
-          </p>
-          <a href="project-category.html?category=Conflict+management" class="link-green">View Project &rarr;</a>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="project-card">
-          <div class="project-image">
-            <div class="project-badge" style="font-size:0.6rem;">Good governance & Economy</div>
-            <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
-              alt="Sustainable Infrastructure"
-            />
-          </div>
-          <div class="project-meta">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              />
-            </svg>
-            Northern Province
-          </div>
-          <h3>Sustainable Infrastructure Program</h3>
-          <p>
-            Building sustainable financial mechanisms that reward local communities for protecting critical watersheds and boosting economic output.
-          </p>
-          <a href="project-category.html?category=Good+governance+and+Economic+development" class="link-green">View Project &rarr;</a>
-        </article>
+      <div class="footer-bottom">
+        &copy; 2026 CIAC RWANDA. All rights reserved.
       </div>
+    </div>
+  </footer>
 
-      <!-- Stats Banner -->
-      <section class="stats-banner">
-        <div class="stat-item">
-          <span class="stat-label">Trees Planted</span>
-          <div class="stat-value">1.2M<span>+</span></div>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Lives Impacted</span>
-          <div class="stat-value">45k<span>+</span></div>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">District Reached</span>
-          <div class="stat-value">30<span>+</span></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col" style="flex: 2">
-            <a href="index.html" class="logo" style="margin-bottom: 2rem; display: flex;">
-              <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-green);">CIAC Rwanda</span>
-            </a>
-            <p style="max-width: 300px">
-              Empowering communities for sustainable environmental management
-              and climate resilience across Rwanda.
-            </p>
-          </div>
-          <div class="footer-col">
-            <h4>Explore</h4>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="#">Government Website</a></li>
-              <li><a href="#">Ministry of Environment</a></li>
-              <li><a href="#">Ministry of Agriculture</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Key Patterns</h4>
-            <ul>
-              <li><a href="#">Wageningen ndiza Foundation</a></li>
-              <li><a href="#">DIBcoop</a></li>
-              <li><a href="#">AgroPlast Ltd</a></li>
-              <li><a href="#">IFFS International</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Office</h4>
-            <p>Kigali-Kicukiro<br />info@ciac.rw<br />+250785507355</p>
-            <div class="social-links">
-              <!-- Globe Icon -->
-              <a href="#"
-                ><svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                  /></svg
-              ></a>
-              <!-- Mail Icon -->
-              <a href="#"
-                ><svg viewBox="0 0 24 24">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                  /></svg
-              ></a>
-              <!-- Share Icon -->
-              <a href="#"
-                ><svg viewBox="0 0 24 24">
-                  <path
-                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                  /></svg
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          &copy; 2026 CIAC RWANDA. All rights reserved.
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // Header scroll animation
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-          header.classList.add('header-scrolled');
-        } else {
-          header.classList.remove('header-scrolled');
-        }
-      });
-
-      // Mobile Menu Toggle
-      const mobileMenu = document.getElementById('mobile-menu');
-      const navWrapper = document.querySelector('.nav-wrapper');
-
-      mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        navWrapper.classList.toggle('active');
-      });
-
-      const heroSlides = [
-        { img: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200&q=80", title: "Conservation" },
-        { img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80", title: "Environment" },
-        { img: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80", title: "Sustainable Future" }
-      ];
-      let currentSlide = 0;
-
-      const heroImg = document.getElementById("heroImg");
-      const heroTitle = document.getElementById("heroTitle");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-
-      function updateHero() {
-        if (!heroImg) return;
-        heroImg.style.opacity = 0.5;
-        setTimeout(() => {
-          heroImg.src = heroSlides[currentSlide].img;
-          heroTitle.innerText = heroSlides[currentSlide].title;
-          heroImg.style.opacity = 1;
-        }, 150);
+  <script>
+    // Header scroll animation
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
       }
+    });
 
-      if (prevBtn && nextBtn) {
-        prevBtn.addEventListener("click", () => {
-          currentSlide = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
-          updateHero();
-        });
-        nextBtn.addEventListener("click", () => {
-          currentSlide = (currentSlide + 1) % heroSlides.length;
-          updateHero();
-        });
-      }
-    </script>
-  </body>
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    mobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      navWrapper.classList.toggle('active');
+    });
+
+    const heroSlides = [
+      { img: "images/project1agro.jpeg", title: "Agroforestry & Livelihood" },
+      { img: "images/project2carbon.jpeg", title: "Carbon Scheme – Rulindo" },
+      { img: "images/project3tree.jpeg", title: "One Tree per Pupil" },
+      { img: "images/project4tea.png", title: "Agroforestry & PES – Tea" },
+      { img: "images/project5edu.jpeg", title: "Education & Classroom Renovation" }
+    ];
+    let currentSlide = 0;
+
+    const heroImg = document.getElementById("heroImg");
+    const heroTitle = document.getElementById("heroTitle");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    function updateHero() {
+      if (!heroImg) return;
+      heroImg.style.opacity = 0.5;
+      setTimeout(() => {
+        heroImg.src = heroSlides[currentSlide].img;
+        heroTitle.innerText = heroSlides[currentSlide].title;
+        heroImg.style.opacity = 1;
+      }, 150);
+    }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+        updateHero();
+      });
+      nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        updateHero();
+      });
+    }
+  </script>
+</body>
+
 </html>
