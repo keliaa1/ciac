@@ -151,41 +151,162 @@
       navWrapper.classList.toggle('active');
     });
 
-    // Logic to simulate dynamic category view
+    // ─── Domain + Project Data ─────────────────────────────────────────────────
+    const domainData = {
+      "Environmental Protection and Biodiversity Conservation": {
+        subtitle: "Protecting Rwanda's ecosystems through agroforestry, reforestation, sustainable agriculture, and conservation awareness.",
+        activities: [
+          "Promoting agroforestry and landscape restoration activities",
+          "Supporting tree nursery establishment and tree planting campaigns",
+          "Protecting biodiversity through restoration of degraded ecosystems and conservation awareness",
+          "Promoting sustainable agriculture and soil erosion control practices",
+          "Raising community awareness on climate change adaptation and environmental conservation",
+          "Supporting protection of water resources, wetlands, and buffer zones",
+          "Encouraging waste management and environmental sanitation initiatives"
+        ],
+        projects: [
+          {
+            id: 1,
+            img: "images/project1agro.jpeg",
+            badge: "Agroforestry · Ongoing",
+            location: "Rutsiro District",
+            title: "Agroforestry & Farmers' Planning for Livelihood Improvement",
+            desc: "Agroforestry and Farmers' Planning for Livelihood Improvement and Landscape Restoration in Rutsiro."
+          },
+          {
+            id: 2,
+            img: "images/project2carbon.jpeg",
+            badge: "Carbon Scheme · Ongoing",
+            location: "Rulindo District",
+            title: "Piloting Carbon Scheme in Rulindo District",
+            desc: "Piloting Carbon Scheme in Rulindo District to foster climate finance and community-based carbon sequestration initiatives."
+          },
+          {
+            id: 3,
+            img: "images/project3tree.jpeg",
+            badge: "Tree Planting",
+            location: "Muhanga & Karongi",
+            title: "One Tree per Pupil",
+            desc: "One tree per pupil in Muhanga Rongi sector and Karongi District — planting a greener future for every child."
+          },
+          {
+            id: 4,
+            img: "images/project4tea.png",
+            badge: "Agroforestry & PES",
+            location: "Rwanda",
+            title: "Agroforestry & PES with Tea Company",
+            desc: "Payment for Ecosystem Services (PES) in partnership with a Tea Company, integrating sustainable land use with economic incentives."
+          }
+        ]
+      },
+      "Women and Youth Empowerment": {
+        subtitle: "Uplifting women and young people through skills, entrepreneurship, and opportunities for sustainable livelihoods.",
+        activities: [
+          "Supporting women and teenage mothers through entrepreneurship and livelihood activities",
+          "Providing vocational and business development training",
+          "Promoting gender equality and women's participation in decision-making",
+          "Facilitating access to income-generating opportunities and savings groups",
+          "Supporting women-led agricultural and environmental initiatives"
+        ],
+        projects: []
+      },
+      "Conflict Management": {
+        subtitle: "Building peace and social cohesion at community level through dialogue, mediation, and reconciliation.",
+        activities: [
+          "Promoting peaceful conflict resolution at family and community levels",
+          "Organizing community dialogues and awareness sessions on social cohesion",
+          "Supporting mediation and reconciliation initiatives",
+          "Providing training on communication, family relationships, and gender-based conflict prevention",
+          "Encouraging community participation in peacebuilding activities"
+        ],
+        projects: []
+      },
+      "Education and Research": {
+        subtitle: "Driving knowledge, innovation, and learning for communities, youth, and farmers across Rwanda.",
+        activities: [
+          "Conducting community-based research on social and environmental challenges",
+          "Organizing trainings, workshops, and awareness campaigns for youth and farmers",
+          "Supporting educational initiatives for vulnerable children and youth",
+          "Developing learning materials and practical demonstration sites",
+          "Promoting innovation and knowledge sharing within communities"
+        ],
+        projects: [
+          {
+            id: 5,
+            img: "images/project5edu.jpeg",
+            badge: "Education & Research",
+            location: "Muhanga, Rongi Sector",
+            title: "Education & Research: Classroom Renovation",
+            desc: "Renovation of Classroom in Muhanga, Rongi sector — improving learning environments for the next generation."
+          }
+        ]
+      }
+    };
+
+    // ─── Resolve category from URL ────────────────────────────────────────────
     const params = new URLSearchParams(window.location.search);
-    const categoryQuery = params.get('category') || 'Environment management';
+    const categoryQuery = (params.get('category') || '').replace(/\+/g, ' ').trim();
 
-    // Set title
+    // Exact match first, then case-insensitive, then default
+    const allKeys = Object.keys(domainData);
+    let matchedKey =
+      allKeys.find(k => k === categoryQuery) ||
+      allKeys.find(k => k.toLowerCase() === categoryQuery.toLowerCase()) ||
+      allKeys[0];
+
+    const domain = domainData[matchedKey];
+
+    // ─── Set page title ───────────────────────────────────────────────────────
     const titleObj = document.getElementById('categoryTitle');
-    titleObj.innerHTML = `${categoryQuery}<br><span class="title-italic-green">Projects</span>`;
+    const words = matchedKey.split(' ');
+    const lastWord = words.pop();
+    titleObj.innerHTML = `${words.join(' ')}<br><span class="title-italic-green">${lastWord}</span>`;
 
-    // Simple mocked data logic to display projects of that category
+    // Update subtitle
+    document.querySelector('.subtitle').textContent = domain.subtitle;
+
+    // ─── Build domain activities panel ────────────────────────────────────────
     const categoryGrid = document.getElementById('categoryGrid');
 
-    // Generic image map depending on category
-    let imgURL = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"; // Default
-    if (categoryQuery.toLowerCase().includes("climate")) imgURL = "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1932&auto=format&fit=crop";
-    else if (categoryQuery.toLowerCase().includes("conflict")) imgURL = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop";
-    else if (categoryQuery.toLowerCase().includes("governance")) imgURL = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop";
+    const activitiesHTML = domain.activities.map(a => `
+      <li style="display:flex;align-items:flex-start;gap:0.7rem;margin-bottom:0.6rem;">
+        <svg style="width:18px;height:18px;flex-shrink:0;margin-top:2px;fill:var(--primary-green);" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        <span>${a}</span>
+      </li>`).join('');
 
-    const commonCard = `
-      <article class="project-card">
-        <div class="project-image">
-          <div class="project-badge">${categoryQuery}</div>
-          <img src="${imgURL}" alt="${categoryQuery}">
-        </div>
-        <div class="project-meta">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Multiple Provinces
-        </div>
-        <h3>Ongoing Regional Collaboration</h3>
-        <p>This is a detailed placeholder showcasing how the team is advancing ${categoryQuery} initiatives on the ground.</p>
-        <a href="#" class="link-green">Join Initiative &rarr;</a>
-      </article>
-    `;
+    const activitiesPanelHTML = `
+      <div style="grid-column:1/-1;background:linear-gradient(135deg,#f0faf3 0%,#e8f5ec 100%);border-left:4px solid var(--primary-green);border-radius:12px;padding:2rem 2.5rem;margin-bottom:1rem;">
+        <h3 style="font-family:var(--font-heading);color:var(--dark-green);margin-bottom:1.2rem;font-size:1.2rem;">Key Activities in This Domain</h3>
+        <ul style="list-style:none;padding:0;margin:0;">${activitiesHTML}</ul>
+      </div>`;
 
-    // Duplicate string 4 times for mock
-    categoryGrid.innerHTML = commonCard + commonCard + commonCard + commonCard;
+    // ─── Build project cards ──────────────────────────────────────────────────
+    let projectCardsHTML = '';
+    if (domain.projects.length > 0) {
+      projectCardsHTML = domain.projects.map(p => `
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-badge">${p.badge}</div>
+            <img src="${p.img}" alt="${p.title}">
+          </div>
+          <div class="project-meta">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            ${p.location}
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+          <a href="project-detail.html?id=${p.id}" class="link-green">View Project &rarr;</a>
+        </article>`).join('');
+    } else {
+      projectCardsHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:3rem 2rem;color:var(--gray-text);">
+          <svg style="width:64px;height:64px;opacity:0.3;margin-bottom:1rem;" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          <p style="font-size:1.1rem;">Projects in this domain are coming soon.</p>
+          <a href="projects.html" class="link-green" style="margin-top:1rem;display:inline-block;">Browse All Projects &rarr;</a>
+        </div>`;
+    }
+
+    categoryGrid.innerHTML = activitiesPanelHTML + projectCardsHTML;
   </script>
 </body>
 
