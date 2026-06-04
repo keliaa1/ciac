@@ -249,6 +249,19 @@ header.header-scrolled .logo-text {
   align-items: center;
 }
 
+.hero-subtitle {
+  display: inline-block;
+  background-color: var(--light-green);
+  color: var(--primary-green);
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .hero-content h1 {
   font-size: 4rem;
   line-height: 1;
@@ -286,13 +299,13 @@ header.header-scrolled .logo-text {
   top: 100%;
   left: 0;
   margin-top: 15px;
-  background-color: var(--white);
+  background-color: var(--primary-green);
   min-width: 320px;
   box-shadow: var(--shadow-lg);
   border-radius: 12px;
   padding: 1.5rem;
   z-index: 100;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--primary-green);
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -306,9 +319,9 @@ header.header-scrolled .logo-text {
   left: 30px;
   width: 16px;
   height: 16px;
-  background-color: var(--white);
-  border-top: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
+  background-color: var(--primary-green);
+  border-top: 1px solid var(--primary-green);
+  border-left: 1px solid var(--primary-green);
   transform: rotate(45deg);
 }
 
@@ -320,7 +333,7 @@ header.header-scrolled .logo-text {
 .dropdown-content p {
   margin: 0 !important;
   font-size: 0.95rem;
-  color: var(--gray-text) !important;
+  color: var(--white) !important;
   line-height: 1.6;
   font-family: var(--font-body);
 }
@@ -1362,6 +1375,10 @@ footer {
   .hero-btns {
     flex-direction: column;
   }
+  .hero-image {
+    height: 400px;
+    object-position: 75% center;
+  }
   .dropdown-content {
     min-width: 100%;
   }
@@ -1427,7 +1444,7 @@ footer {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--gray-text);
+    color: var(--white);
     cursor: pointer;
     line-height: 1;
   }
