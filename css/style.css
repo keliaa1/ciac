@@ -247,6 +247,8 @@ header.header-scrolled .logo-text {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-subtitle {
@@ -627,7 +629,7 @@ header.header-scrolled .logo-text {
   content: '';
   position: absolute;
   inset: 10px;
-  background: #87b433;
+  background: var(--primary-green);
   border-radius: 50%;
   z-index: 1;
 }
