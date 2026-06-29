@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 /**
  * Template Name: Contact Page
  */
@@ -95,10 +93,24 @@ get_header(); ?>
           </p>
           <?php 
             $iframe = get_field('sidebar_map_iframe');
-            if($iframe) {
-              echo $iframe; // output raw iframe
+            if ( $iframe ) {
+              // Sanitize iframe: only allow safe iframe attributes
+              $allowed_iframe_tags = array(
+                'iframe' => array(
+                  'src'             => true,
+                  'width'           => true,
+                  'height'          => true,
+                  'style'           => true,
+                  'frameborder'     => true,
+                  'allowfullscreen' => true,
+                  'loading'         => true,
+                  'referrerpolicy'  => true,
+                  'title'           => true,
+                ),
+              );
+              echo wp_kses( $iframe, $allowed_iframe_tags );
             } else {
-              echo '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.480207262104!2d30.08675359797305!3d-2.016670799704308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca95983a4eb33%3A0x502a907c03656372!2sCIAC%20RWANDA!5e0!3m2!1sen!2srw!4v1780597309755!5m2!1sen!2srw" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+              echo '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.480207262104!2d30.08675359797305!3d-2.016670799704308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca95983a4eb33%3A0x502a907c03656372!2sCIAC%20RWANDA!5e0!3m2!1sen!2srw!4v1780597309755!5m2!1sen!2srw" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="CIAC Rwanda Location"></iframe>';
             }
           ?>
         </div>

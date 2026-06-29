@@ -1,24 +1,29 @@
 <?php
 /**
  * The base configuration for WordPress
- * FULLY SECURED VERSION - PRODUCTION READY
+ * Production configuration — CIAC Rwanda
+ *
+ * ⚠️  Before going live, update DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
+ *    to match your production server credentials.
  *
  * @package WordPress
  */
 
 
 
-define( 'DB_NAME', 'local' );
+define( 'DB_NAME', '' );
 define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', 'root' );
-define( 'DB_HOST', 'localhost' );   
+define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 
 
-define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/' );
-define( 'WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/' );
+// Auto-detect HTTPS so links are always correct behind an SSL certificate
+$_wp_scheme = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ) ? 'https' : 'http';
+define( 'WP_HOME',    $_wp_scheme . '://' . $_SERVER['HTTP_HOST'] . '/' );
+define( 'WP_SITEURL', $_wp_scheme . '://' . $_SERVER['HTTP_HOST'] . '/' );
 
 
 define('AUTH_KEY',         'L7z%f%yf&5G_O9KMb_nysv:j9F3c5MM(U3wH5I#M0IpO-592Ful&m%Ba;Z0sSn4R');
@@ -34,10 +39,9 @@ define('NONCE_SALT',       'T5F*IiwJ]Oy&1_&]w/W&g5Y@WI1K5qR-:M79CYsYWHo1I2S69T[a
 $table_prefix = 'oJegmj1Sz_';
 
 
-define('DISALLOW_FILE_EDIT', false);  // Allow WP Admin theme/plugin editor
-
-define('DISALLOW_FILE_MODS', false);
-define('FORCE_SSL_ADMIN', false);  // Disabled for local development (no HTTPS)
+define('DISALLOW_FILE_EDIT', false);   // Allow WP Admin theme/plugin editor
+define('DISALLOW_FILE_MODS', false);   // Allow plugin/theme updates from dashboard
+define('FORCE_SSL_ADMIN', true);       // Force HTTPS for all admin & login pages
 
 
 define('WP_POST_REVISIONS', 5);
@@ -69,7 +73,7 @@ define('DISALLOW_UNFILTERED_HTML', true);
 
 
 @ini_set('session.cookie_httponly', true);
-@ini_set('session.cookie_secure', false);
+@ini_set('session.cookie_secure', true);
 @ini_set('session.cookie_samesite', 'Strict');
 
 

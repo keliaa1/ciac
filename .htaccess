@@ -1,3 +1,14 @@
+# ================================================
+# 🔒 FORCE HTTPS — Redirect all HTTP traffic to HTTPS
+# ================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^\.local [NC]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -29,8 +40,8 @@ RewriteRule . /index.php [L]
     # Prevent clickjacking
     Header set X-Frame-Options "SAMEORIGIN"
     
-    # Force HTTPS (enable only after SSL is installed)
-    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    # Force HTTPS for 1 year (enable only after SSL is confirmed working)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
     
     # Control referrer information
     Header set Referrer-Policy "strict-origin-when-cross-origin"
@@ -86,6 +97,28 @@ Options -Indexes
 </Files>
 
 # ================================================
+# 🔒 BLOCK DEBUG & LOG FILES
+# ================================================
+<FilesMatch "^(debug\.log|error_log|\.log)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Block any .log files anywhere on the site
+<FilesMatch "\.log$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ================================================
+# 🔒 BLOCK .PHAR FILES (CLI TOOLS)
+# ================================================
+<FilesMatch "\.phar$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ================================================
 # 🔐 BLOCK PHP EXECUTION IN UPLOADS
 # ================================================
 <IfModule mod_rewrite.c>
@@ -111,21 +144,19 @@ RewriteCond %{QUERY_STRING} author=\d [NC]
 RewriteRule .* - [R=403,L]
 
 # ================================================
-# 🔐 LOGIN PROTECTION - RATE LIMITING
+# 🔒 LOGIN PROTECTION — BRUTE FORCE MITIGATION
 # ================================================
-# <IfModule mod_rewrite.c>
-#     # Protect wp-login.php
-#     RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
-#     RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
-#     RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
-#     RewriteCond %{REMOTE_ADDR} !^::1
-#     RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_ [NC]
-#     
-#     # Rate limiting - 5 attempts per minute
-#     RewriteCond %{ENV:RATE_LIMIT_BLOCK} !1
-#     RewriteCond %{TIME_SEC} \d{2}$
-#     RewriteRule .* - [F]
-# </IfModule>
+<IfModule mod_rewrite.c>
+    # Block wp-login.php access for non-logged-in users via known bad methods
+    # (Complement this with the 'Limit Login Attempts Reloaded' plugin)
+    RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
+    RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
+    RewriteCond %{REMOTE_ADDR} !^::1
+    RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_ [NC]
+    RewriteCond %{HTTP_USER_AGENT} (sqlmap|nmap|nikto|dirbuster|masscan|havij|acunetix|w3af|nessus|python-requests|go-http|libcurl) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
 
 # ================================================
 # 🔐 PROTECT LOST PASSWORD FORM
