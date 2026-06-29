@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIAC Rwanda - Project Detail</title>
+  <meta name="description" content="Full details about CIAC Rwanda's community-led environmental and social projects.">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="icon" type="image/png" href="/images/logo-og.png">
+  <style>
+    /* ── Project Detail Page Styles ─────────────────────── */
+    .detail-hero {
+      position: relative;
+      height: 520px;
+      border-radius: 24px;
+      overflow: hidden;
+      margin: 2.5rem 0;
+    }
+    .detail-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .detail-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,40,20,0.85) 0%, rgba(10,40,20,0.2) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+    }
+    .detail-badge {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    .detail-hero-overlay h1 {
+      color: white;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      max-width: 700px;
+    }
+    .detail-meta-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .detail-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .detail-meta-item svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--primary-green);
+      flex-shrink: 0;
+    }
+
+    /* ── Content Layout ─────────────────────────────────── */
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      margin-bottom: 5rem;
+      align-items: start;
+    }
+
+    /* ── Main Content ────────────────────────────────────── */
+    .detail-main section {
+      margin-bottom: 2.5rem;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .detail-main h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--dark-green);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--light-bg);
+    }
+    .detail-main p {
+      color: var(--gray-text);
+      line-height: 1.9;
+      font-size: 0.97rem;
+      margin-bottom: 1rem;
+    }
+    .detail-activities {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .detail-activities li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--light-bg);
+      font-size: 0.95rem;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    .detail-activities li svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      fill: var(--primary-green);
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────── */
+    .detail-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .sidebar-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.8rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .sidebar-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--dark-green);
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--light-bg);
+      font-size: 0.88rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .label {
+      color: var(--gray-text);
+      font-weight: 500;
+    }
+    .info-row .value {
+      font-weight: 700;
+      color: var(--dark-green);
+      text-align: right;
+    }
+    .domain-pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #f0faf3, #e2f5e9);
+      color: var(--primary-green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      border: 1px solid var(--primary-green);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Back Button ─────────────────────────────────────── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-green);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      transition: gap 0.2s;
+      text-decoration: none;
+    }
+    .back-link:hover { gap: 0.8rem; }
+    .back-link svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ── Related Projects ────────────────────────────────── */
+    .related-section { margin-bottom: 5rem; }
+    .related-section h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--dark-green);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .detail-layout { grid-template-columns: 1fr; }
+      .detail-sidebar { order: -1; flex-direction: row; flex-wrap: wrap; }
+      .sidebar-card { flex: 1; min-width: 260px; }
+    }
+    @media (max-width: 768px) {
+      .detail-hero { height: 380px; }
+      .detail-hero-overlay h1 { font-size: 1.9rem; }
+      .detail-sidebar { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-og.png" alt="CIAC Rwanda Logo" />
+        <span class="logo-text">CIAC Rwanda</span>
+      </a>
+      <nav class="nav-wrapper">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get Involved</a>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Back Link -->
+    <a href="projects.html" class="back-link" id="backLink">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to All Projects
+    </a>
+
+    <!-- Hero Image -->
+    <div class="detail-hero">
+      <img id="detailHeroImg" src="" alt="Project Image">
+      <div class="detail-hero-overlay">
+        <div class="detail-badge" id="detailBadge"></div>
+        <h1 id="detailTitle"></h1>
+        <div class="detail-meta-row">
+          <div class="detail-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span id="detailLocation"></span>
+          </div>
+          <div class="detail-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            <span id="detailStatus"></span>
+          </div>
+          <div class="detail-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            <span id="detailYear"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="detail-layout">
+
+      <!-- Left: Content -->
+      <div class="detail-main">
+        <section>
+          <h2>Project Overview</h2>
+          <div id="detailOverview"></div>
+        </section>
+
+        <section>
+          <h2>Key Activities</h2>
+          <ul class="detail-activities" id="detailActivities"></ul>
+        </section>
+
+        <section>
+          <h2>Expected Outcomes</h2>
+          <div id="detailOutcomes"></div>
+        </section>
+      </div>
+
+      <!-- Right: Sidebar -->
+      <div class="detail-sidebar">
+        <div class="sidebar-card">
+          <h4>Project Info</h4>
+          <div class="info-row">
+            <span class="label">Location</span>
+            <span class="value" id="sideLocation"></span>
+          </div>
+          <div class="info-row">
+            <span class="label">Status</span>
+            <span class="value" id="sideStatus"></span>
+          </div>
+          <div class="info-row">
+            <span class="label">Year Started</span>
+            <span class="value" id="sideYear"></span>
+          </div>
+          <div class="info-row">
+            <span class="label">Beneficiaries</span>
+            <span class="value" id="sideBeneficiaries"></span>
+          </div>
+          <div class="info-row">
+            <span class="label">Domain</span>
+            <span class="value"><span class="domain-pill" id="sideDomain"></span></span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Get Involved</h4>
+          <p style="font-size:0.88rem;color:var(--gray-text);margin-bottom:1.2rem;line-height:1.7;">
+            Want to support this initiative or partner with us on similar projects?
+          </p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;display:block;">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Projects -->
+    <section class="related-section">
+      <h2>Related <span style="color:var(--primary-green)">Projects</span></h2>
+      <div class="projects-grid" id="relatedGrid"></div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+      <div class="stat-item">
+        <span class="stat-label">Trees Planted</span>
+        <div class="stat-value">1.2M<span>+</span></div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Lives Impacted</span>
+        <div class="stat-value">45k<span>+</span></div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Districts Reached</span>
+        <div class="stat-value">30<span>+</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="flex: 2">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem; display: flex;">
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-green);">CIAC Rwanda</span>
+          </a>
+          <p style="max-width: 300px">Empowering communities for sustainable environmental management and climate resilience across Rwanda.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Government Website</a></li>
+            <li><a href="#">Ministry of Environment</a></li>
+            <li><a href="#">Ministry of Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Key Partners</h4>
+          <ul>
+            <li><a href="#">Wageningen ndiza Foundation</a></li>
+            <li><a href="#">DIBcoop</a></li>
+            <li><a href="#">AgroPlast Ltd</a></li>
+            <li><a href="#">IFFS International</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Office</h4>
+          <p>Kigali-Kicukiro<br />info@ciac.rw<br />+250785507355</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 CIAC RWANDA. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Header scroll ────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      document.querySelector('header').classList.toggle('header-scrolled', window.scrollY > 50);
+    });
+
+    // ── Mobile menu ──────────────────────────────────────
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('active');
+      document.querySelector('.nav-wrapper').classList.toggle('active');
+    });
+
+    // ── All Projects Data ────────────────────────────────
+    const projects = [
+      {
+        id: 1,
+        img: "images/project1agro.jpeg",
+        badge: "Agroforestry · Ongoing",
+        location: "Rutsiro District",
+        status: "Ongoing",
+        year: "2022",
+        beneficiaries: "2,500+ Farmers",
+        domain: "Environmental Protection & Biodiversity Conservation",
+        domainSlug: "Environmental+Protection+and+Biodiversity+Conservation",
+        title: "Agroforestry & Farmers' Planning for Livelihood Improvement",
+        overview: `
+          <p>This project focuses on implementing agroforestry systems and structured farmers' planning initiatives across Rutsiro District to improve rural livelihoods and restore degraded landscapes. CIAC Rwanda works hand-in-hand with smallholder farming communities to integrate tree planting within agricultural fields, creating a sustainable model that boosts both ecological and economic outcomes.</p>
+          <p>The project aligns with Rwanda's national green growth strategy and supports farmers in transitioning from subsistence farming to more resilient, tree-integrated production systems that protect soil, water, and biodiversity.</p>
+        `,
+        activities: [
+          "Establishing demonstration agroforestry plots in key sectors of Rutsiro District",
+          "Training farmers on agroforestry principles, tree selection, and land management",
+          "Supporting the development of community-based farmers' cooperatives",
+          "Conducting soil health assessments and providing erosion control interventions",
+          "Facilitating access to improved seeds, seedlings, and agricultural inputs",
+          "Monitoring and evaluating livelihood outcomes through seasonal assessments"
+        ],
+        outcomes: `
+          <p>Through this initiative, over 2,500 farmers are expected to adopt sustainable agroforestry practices, leading to improved food security, increased household income, and significant landscape restoration across Rutsiro District. The project directly contributes to Rwanda's target of restoring degraded land and achieving carbon neutrality.</p>
+        `
+      },
+      {
+        id: 2,
+        img: "images/project2carbon.jpeg",
+        badge: "Carbon Scheme · Ongoing",
+        location: "Rulindo District",
+        status: "Ongoing",
+        year: "2023",
+        beneficiaries: "1,800+ Community Members",
+        domain: "Environmental Protection & Biodiversity Conservation",
+        domainSlug: "Environmental+Protection+and+Biodiversity+Conservation",
+        title: "Piloting Carbon Scheme in Rulindo District",
+        overview: `
+          <p>CIAC Rwanda is pioneering a community-based carbon sequestration scheme in Rulindo District, creating a model for climate finance that directly benefits local communities. The pilot project establishes robust carbon accounting frameworks and connects rural farmers to emerging carbon markets, enabling them to earn income from sustainable land management.</p>
+          <p>This initiative aims to demonstrate the viability of community-led carbon projects in Rwanda, providing a replicable framework that can be scaled across the country to finance environmental stewardship at the grassroots level.</p>
+        `,
+        activities: [
+          "Establishing baseline carbon stock measurements across participating land parcels",
+          "Training community members on carbon monitoring, reporting, and verification (MRV)",
+          "Developing community carbon management plans and governance structures",
+          "Linking farmers to voluntary carbon markets and certification bodies",
+          "Planting native tree species to enhance above-ground carbon sequestration",
+          "Building local capacity for long-term carbon project management"
+        ],
+        outcomes: `
+          <p>The carbon scheme is projected to sequester over 50,000 tonnes of CO₂ equivalent over its 10-year lifespan, while generating meaningful carbon revenue for 1,800+ community members in Rulindo. The project will serve as a national model for community-based carbon finance in Rwanda.</p>
+        `
+      },
+      {
+        id: 3,
+        img: "images/project3tree.jpeg",
+        badge: "Tree Planting",
+        location: "Muhanga & Karongi Districts",
+        status: "Active",
+        year: "2023",
+        beneficiaries: "5,000+ Pupils & Families",
+        domain: "Environmental Protection & Biodiversity Conservation",
+        domainSlug: "Environmental+Protection+and+Biodiversity+Conservation",
+        title: "One Tree per Pupil — Muhanga Rongi Sector & Karongi (Dibcoopya Gakeri)",
+        overview: `
+          <p>The "One Tree per Pupil" campaign is a transformative environmental education initiative implemented in partnership with DIBcoop and schools in Muhanga's Rongi Sector and across Karongi District. Each school pupil receives a native tree seedling, learns how to plant and care for it, and takes responsibility for its growth — creating a generation of young environmental stewards.</p>
+          <p>Known locally as <em>Dibcoopya Gakeri</em>, this campaign blends environmental conservation with values education, teaching children that every individual action contributes to a greener Rwanda.</p>
+        `,
+        activities: [
+          "Distributing native tree seedlings to every enrolled pupil in participating schools",
+          "Conducting environmental education sessions in classrooms and school gardens",
+          "Establishing school nurseries for ongoing seedling propagation",
+          "Training teachers to integrate environmental stewardship into the curriculum",
+          "Organizing community tree planting days with parents and local leaders",
+          "Tracking and reporting on tree survival rates and pupil engagement"
+        ],
+        outcomes: `
+          <p>With over 5,000 pupils participating across Muhanga and Karongi, the campaign has already resulted in thousands of trees planted in schoolyards, homes, and community spaces. Beyond the ecological impact, the initiative is building a lasting culture of environmental responsibility among Rwanda's next generation.</p>
+        `
+      },
+      {
+        id: 4,
+        img: "images/project4tea.png",
+        badge: "Agroforestry & PES",
+        location: "Rwanda (National)",
+        status: "Ongoing",
+        year: "2022",
+        beneficiaries: "3,000+ Tea Farmers",
+        domain: "Environmental Protection & Biodiversity Conservation",
+        domainSlug: "Environmental+Protection+and+Biodiversity+Conservation",
+        title: "Agroforestry & Payment for Ecosystem Services (PES) with Tea Company",
+        overview: `
+          <p>CIAC Rwanda has facilitated a landmark partnership between smallholder tea farmers and a leading Rwandan tea company, creating a Payment for Ecosystem Services (PES) mechanism that rewards farmers for adopting agroforestry and sustainable land management practices. Shade trees planted among tea bushes improve tea quality, reduce erosion, and support biodiversity.</p>
+          <p>This private-sector-linked model demonstrates how environmental stewardship can be economically viable, with companies paying farmers for the ecosystem services their land management provides — from carbon sequestration to watershed protection.</p>
+        `,
+        activities: [
+          "Mapping and valuing ecosystem services provided by smallholder tea farms",
+          "Negotiating PES agreements between farmers, CIAC, and the tea company",
+          "Planting shade tree species among tea crops to improve microclimate and quality",
+          "Training farmers on integrated crop management and agroforestry practices",
+          "Establishing monitoring systems to verify ecosystem service delivery",
+          "Documenting and disseminating the PES model for replication across Rwanda"
+        ],
+        outcomes: `
+          <p>Over 3,000 tea farmers are expected to benefit from PES payments and improved tea yields through shade-grown practices. The model is projected to increase farmer income by 20–30% while significantly improving the ecological health of tea-growing landscapes across Rwanda.</p>
+        `
+      },
+      {
+        id: 5,
+        img: "images/project5edu.jpeg",
+        badge: "Education & Research",
+        location: "Muhanga, Rongi Sector",
+        status: "Completed",
+        year: "2023",
+        beneficiaries: "400+ Students",
+        domain: "Education & Research",
+        domainSlug: "Education+and+Research",
+        title: "Education & Research: Classroom Renovation in Muhanga, Rongi Sector",
+        overview: `
+          <p>As part of CIAC Rwanda's commitment to education and community development, this project renovated deteriorating classroom facilities in Muhanga's Rongi Sector, creating a safe, inspiring learning environment for over 400 students. The renovation included structural repairs, new furniture, improved lighting, and installation of learning materials.</p>
+          <p>Beyond the physical infrastructure, the project embedded environmental education resources into the classroom, ensuring students learn about sustainability, biodiversity, and Rwanda's ecological heritage as part of their daily schooling experience.</p>
+        `,
+        activities: [
+          "Assessing and documenting the structural needs of target classrooms",
+          "Coordinating with local construction teams for renovation works",
+          "Procuring and installing new desks, chairs, and blackboards",
+          "Painting and improving ventilation and natural lighting in classrooms",
+          "Installing environmental education materials, charts, and learning aids",
+          "Engaging the school community in maintenance and ownership of the renovated spaces"
+        ],
+        outcomes: `
+          <p>Over 400 students in Muhanga's Rongi Sector now learn in renovated, well-equipped classrooms. The improved learning environment has contributed to better school attendance and teacher morale. Environmental education materials ensure the project's impact extends beyond infrastructure to values and knowledge formation.</p>
+        `
+      }
+    ];
+
+    // ── Render Page ──────────────────────────────────────
+    const params = new URLSearchParams(window.location.search);
+    const projectId = parseInt(params.get('id')) || 1;
+    const project = projects.find(p => p.id === projectId) || projects[0];
+
+    // Update page title
+    document.title = `${project.title} — CIAC Rwanda`;
+
+    // Hero
+    document.getElementById('detailHeroImg').src = project.img;
+    document.getElementById('detailHeroImg').alt = project.title;
+    document.getElementById('detailBadge').textContent = project.badge;
+    document.getElementById('detailTitle').textContent = project.title;
+    document.getElementById('detailLocation').textContent = project.location;
+    document.getElementById('detailStatus').textContent = project.status;
+    document.getElementById('detailYear').textContent = `Since ${project.year}`;
+
+    // Main content
+    document.getElementById('detailOverview').innerHTML = project.overview;
+    document.getElementById('detailActivities').innerHTML = project.activities
+      .map(a => `<li>
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        ${a}
+      </li>`).join('');
+    document.getElementById('detailOutcomes').innerHTML = project.outcomes;
+
+    // Sidebar
+    document.getElementById('sideLocation').textContent = project.location;
+    document.getElementById('sideStatus').textContent = project.status;
+    document.getElementById('sideYear').textContent = project.year;
+    document.getElementById('sideBeneficiaries').textContent = project.beneficiaries;
+    document.getElementById('sideDomain').textContent = project.domain;
+
+    // Related projects (others in same domain, max 3)
+    const related = projects.filter(p => p.domain === project.domain && p.id !== project.id).slice(0, 3);
+    if (related.length > 0) {
+      document.getElementById('relatedGrid').innerHTML = related.map(p => `
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-badge">${p.badge}</div>
+            <img src="${p.img}" alt="${p.title}">
+          </div>
+          <div class="project-meta">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            ${p.location}
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.overview.replace(/<[^>]*>/g, '').trim().slice(0, 120)}...</p>
+          <a href="project-detail.html?id=${p.id}" class="link-green">View Project &rarr;</a>
+        </article>
+      `).join('');
+    } else {
+      document.querySelector('.related-section').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

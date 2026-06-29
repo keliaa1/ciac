@@ -7,10 +7,11 @@
  */
 
 
+
 define( 'DB_NAME', 'local' );
 define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', 'root' );
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'localhost' );   
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
@@ -30,13 +31,13 @@ define('LOGGED_IN_SALT',   'Nwm@D_7y|urrrfbHVk6D_+~K06j13SZ@0T-zG1;%502zsH##[Rff
 define('NONCE_SALT',       'T5F*IiwJ]Oy&1_&]w/W&g5Y@WI1K5qR-:M79CYsYWHo1I2S69T[aM6*@d89_iU2I');
 
 
-$table_prefix = 'ojegmj1sz_';
+$table_prefix = 'oJegmj1Sz_';
 
 
-define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', false);  // Allow WP Admin theme/plugin editor
 
-define('DISALLOW_FILE_MODS', false); 
-define('FORCE_SSL_ADMIN', false); 
+define('DISALLOW_FILE_MODS', false);
+define('FORCE_SSL_ADMIN', false);  // Disabled for local development (no HTTPS)
 
 
 define('WP_POST_REVISIONS', 5);
@@ -50,16 +51,16 @@ define('DISABLE_WP_CRON', false);
 define('WP_AUTO_UPDATE_CORE', 'minor');
 
 
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG', false);         // Production: debug off
+define('WP_DEBUG_LOG', false);
+define('WP_DEBUG_DISPLAY', false);
 define('SCRIPT_DEBUG', false);
 define('CONCATENATE_SCRIPTS', true);
 define('COMPRESS_SCRIPTS', true);
 define('COMPRESS_CSS', true);
 
 
-define('WP_HTTP_BLOCK_EXTERNAL', false); 
+define('WP_HTTP_BLOCK_EXTERNAL', false);
 define('WP_ACCESSIBLE_HOSTS', 'api.wordpress.org,*.google.com,*.github.com');
 
 @ini_set('display_errors', 0);

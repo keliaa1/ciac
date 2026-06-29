@@ -1,0 +1,13 @@
+.git/
+.gitignore
+local-xdebuginfo.php
+wp-cli.phar
+wp-cli-fresh.phar
+curl_*.html
+curl_output.txt
+new_db.sql
+force-setup.php
+setup-theme.php
+_html_backup/
+Testing/
+.trunk/
